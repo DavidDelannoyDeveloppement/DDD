@@ -6,12 +6,14 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
 }
 
 div.cover {
     position: relative;
     background: url(fond_ordi_filtre.png) no-repeat center/cover;
-    height: 360px;
+    height: 400px;
     
 }
 
@@ -30,15 +32,23 @@ h1 {
     font-size: 42px;
     color:var(--color1);
     text-align: center;
-    margin-bottom: 14px;
+    margin-bottom: 0px;
 }
+
+
 
 div.cover p {
     font-family: Monotype Corsiva;
     font-size: 20px;
     color:var(--color1);
     text-align: center;
-    margin-top: 14px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+}
+
+div.cover c {
+    font-size: 42px;
 }
 
 div.cover-contact{
@@ -78,7 +88,7 @@ a.contact-button{
     text-decoration: none; /* pour supprimer le soulignage */
     background-color: #00000050; /*pour ajouter une opacité noire */
     display: inline-block; /* pour pouvoir paramétrer des marges */
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 14px;
 }
 
@@ -90,7 +100,7 @@ a.contact-button:hover { /*hover = si la souris survole le lien */
 
 .section{ /*classe commune à toutes les sections afin de rassembler les propriétés communes*/
     padding-left: 40px;
-    padding-right: 40 px;
+    padding-right: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
     
@@ -100,7 +110,20 @@ div.section-grise1{
     /*import du triangle blanc, sans répétition, centré, en bas, largeur 100%*/
     background: url(triangle2white.svg)no-repeat center bottom/100%;
     background-color: var(--color2);
-    padding-bottom: 80px;
+    padding-bottom: 70px;
+}
+
+div.section-grise1 p { /*personnalisation du texte*/
+    font-size: 22px;
+    color: #656565;
+    text-align: center;
+    max-width: 450px;   /*pour que le texte apparaisse sur 2 lignes*/
+    margin-left: auto;  /*pour qu'il reste centré*/
+    margin-right: auto; 
+}
+
+div.section-grise1 p:first-child {
+    margin-bottom: 40px;
 }
 
 div.section-grise2{
@@ -115,4 +138,12 @@ h2{
     margin-top: 0px;
 }
 
+div.separateur {
+    background-color: #979797;
+    height: 1px;
+    width: 150px;
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+}
 
