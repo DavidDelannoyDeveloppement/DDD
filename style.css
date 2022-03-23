@@ -1,0 +1,118 @@
+:root{ /*variables données à tout le code CSS */
+    --color1: rgb(255, 100, 0);
+    --color2: #f4f4f4;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.cover {
+    position: relative;
+    background: url(fond_ordi_filtre.png) no-repeat center/cover;
+    height: 360px;
+    
+}
+
+img.cover-profile {
+    height: 100px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 50px;
+    border: 1px solid var(--color1);
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: Monotype Corsiva;
+    font-size: 42px;
+    color:var(--color1);
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+div.cover p {
+    font-family: Monotype Corsiva;
+    font-size: 20px;
+    color:var(--color1);
+    text-align: center;
+    margin-top: 14px;
+}
+
+div.cover-contact{
+    position: absolute; /*attention ! Le parent doit être en position relative pour être ici en absolute ! */
+    top: 10px;
+    left: 10px;
+    border-left: 2px solid var(--color1);
+    padding-left: 8px; /*pour séparer la bordure du texte */
+}
+
+div.cover-contact p{
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+div.cover-contact p:first-child{
+    margin-bottom: 14px;
+}
+
+div.cover-contact a{ /*ou * plutot que a pour personnaliser tous les éléments présents dans cette div*/
+    color: white;
+    font-size: 14px;
+}
+
+div.cover-contact a:hover{ 
+    color: var(--color1);
+    font-size: 15px;
+}
+
+a.contact-button{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid var(--color1);
+    padding: 10px 20px;
+    text-decoration: none; /* pour supprimer le soulignage */
+    background-color: #00000050; /*pour ajouter une opacité noire */
+    display: inline-block; /* pour pouvoir paramétrer des marges */
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+a.contact-button:hover { /*hover = si la souris survole le lien */
+    color: var(--color1);
+    border: 1px solid white;
+    font-size: 15px;
+}
+
+.section{ /*classe commune à toutes les sections afin de rassembler les propriétés communes*/
+    padding-left: 40px;
+    padding-right: 40 px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+div.section-grise1{
+    /*import du triangle blanc, sans répétition, centré, en bas, largeur 100%*/
+    background: url(triangle2white.svg)no-repeat center bottom/100%;
+    background-color: var(--color2);
+    padding-bottom: 80px;
+}
+
+div.section-grise2{
+    background: url(triangle1white.svg)no-repeat center top/100%;
+    background-color: var(--color2);
+    padding-top: 80px;
+}
+
+h2{
+    text-align: center;
+    font-size: 34px;
+    margin-top: 0px;
+}
+
+
