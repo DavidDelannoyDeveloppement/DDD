@@ -4,93 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{ D D D }</title>
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-
-        :root{ /*variables données à tout le code CSS */
-            --color1: rgb(255,155,0);
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        div.cover {
-            position: relative;
-            background: url(fond_ordi_filtre.png) no-repeat center/cover;
-            height: 360px;
-            
-        }
-
-        img.cover-profile {
-            height: 100px;
-            position: relative;
-            left: 50%;
-            margin-left: -50px;
-            margin-top: 50px;
-        }
-
-        h1 {
-            font-family: Monotype Corsiva;
-            font-size: 40px;
-            color:var(--color1);
-            text-align: center;
-        }
-
-        div.cover p {
-            font-family: Monotype Corsiva;
-            font-size: 20px;
-            color:var(--color1);
-            text-align: center;
-        }
-
-        div.cover-contact{
-            position: absolute; /*attention ! Le parent doit être en position relative pour être ici en absolute ! */
-            top: 3px;
-            left: 10px;
-            border-left: 2px solid var(--color1);
-            padding-left: 8px; /*pour séparer la bordure du texte */
-        }
-
-        div.cover-contact p{
-            margin-top: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-align: left;
-        }
-
-        div.cover-contact a{ /*ou * plutot que a pour personnaliser tous les éléments présents dans cette div*/
-            color: white;
-            font-size: 14px;
-        }
-
-        div.cover-contact a:hover{ 
-            color: var(--color1);
-            font-size: 15px;
-        }
-
-        a.contact-button{
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            border: 1px solid var(--color1);
-            padding: 10px 20px;
-            text-decoration: none; /* pour supprimer le soulignage */
-            background-color: #00000050; /*pour ajouter une opacité noire */
-            display: inline-block; /* pour pouvoir paramétrer des marges */
-            margin-top: 10px;
-        }
-
-        a.contact-button:hover { /*hover = si la souris survole le lien */
-            color: var(--color1);
-            border: 1px solid white;
-            font-size: 17px;
-        }
-
-    </style>
 </head>
+
 <body>
+    <!--COUVERTURE-->
     <div class="cover">
-        <img class="cover-profile" src="profil1_tres_petit.png"/>
+        <img class="cover-profile" src="profil_perso.jpg"/>
         <h1>{ D D D }</h1>
         <p>{ David Delannoy Développement }</p>
 
@@ -102,8 +23,31 @@
             <p><a href="mailto:daviddelannoydeveloppement@gmail.com?subject=Prise%20de%20contact%20depuis%20le%20site%20{DDD}">daviddelannoydeveloppement@gmail.com</a></p> <!--mailto pour ouvrir une boite d'envoi et ?subject pour un objet pré-écrit.   Attention !!! dans une URL il faut remplacer les espaces par des %20 ! -->
             <p><a href="tel:+33610031544">06 10 03 15 44</a></p>
         </div>
- 
+    </div>
+
+    <!--SECTION GRISE N#1-->
+    <div class="section section-grise1">
+        <!--Lorem = Texte pour exemple-->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, voluptatem nulla ea saepe ipsam porro nemo neque quaerat magnam sapiente commodi nostrum laudantium praesentium sit, at dolorem eos vero voluptatum.
+    </div>
+
+    <!--SECTION BLANCHE-->
+    <div class="section">
+        <h2>En savoir plus</h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ut eos, ipsa ex impedit modi voluptatum iusto nostrum adipisci, iste, blanditiis voluptates! Ratione distinctio velit facere accusantium. Optio, delectus natus.
+    </div>
+
+    <!--SECTION GRISE N#2-->
+    <div class="section section section-grise2">
+        <h2>Portfolio</h2>
+        <!--Lorem = Texte pour exemple-->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, voluptatem nulla ea saepe ipsam porro nemo neque quaerat magnam sapiente commodi nostrum laudantium praesentium sit, at dolorem eos vero voluptatum.
     </div>
     
+    <!--SECTION BLANCHE-->
+    <div class="section">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores ut eos, ipsa ex impedit modi voluptatum iusto nostrum adipisci, iste, blanditiis voluptates! Ratione distinctio velit facere accusantium. Optio, delectus natus.
+    </div>
+
 </body>
 </html>
