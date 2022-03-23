@@ -73,6 +73,8 @@ div.cover-contact p:first-child{
 div.cover-contact a{ /*ou * plutot que a pour personnaliser tous les éléments présents dans cette div*/
     color: white;
     font-size: 14px;
+    background-color: #00000040;
+
 }
 
 div.cover-contact a:hover{ 
@@ -122,9 +124,6 @@ div.section-grise1 p { /*personnalisation du texte*/
     margin-right: auto; 
 }
 
-div.section-grise1 p:first-child {
-    margin-bottom: 40px;
-}
 
 div.section-grise2{
     background: url(triangle1white.svg)no-repeat center top/100%;
