@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 :root{ /*variables données à tout le code CSS */
     --color1: rgb(255, 100, 0);
     --color2: #f4f4f4;
@@ -22,7 +26,7 @@ img.cover-profile {
     position: relative;
     left: 50%;
     margin-left: -50px;
-    margin-top: 50px;
+    margin-top: 80px;
     border: 1px solid var(--color1);
     border-radius: 50%;
 }
@@ -33,6 +37,7 @@ h1 {
     color:var(--color1);
     text-align: center;
     margin-bottom: 0px;
+    margin-top: 15px;
 }
 
 
@@ -42,7 +47,7 @@ div.cover p {
     font-size: 20px;
     color:var(--color1);
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 15px;
 
 }
@@ -105,6 +110,7 @@ a.contact-button:hover { /*hover = si la souris survole le lien */
     padding-right: 40px;
     padding-top: 30px;
     padding-bottom: 30px;
+    overflow: auto;
     
 }
 
@@ -112,14 +118,14 @@ div.section-grise1{
     /*import du triangle blanc, sans répétition, centré, en bas, largeur 100%*/
     background: url(triangle2white.svg)no-repeat center bottom/100%;
     background-color: var(--color2);
-    padding-bottom: 70px;
+    padding-bottom: 90px;
 }
 
 div.section-grise1 p { /*personnalisation du texte*/
     font-size: 22px;
     color: #656565;
     text-align: center;
-    max-width: 450px;   /*pour que le texte apparaisse sur 2 lignes*/
+    max-width: 350px;   /*pour que le texte apparaisse sur 2 lignes*/
     margin-left: auto;  /*pour qu'il reste centré*/
     margin-right: auto; 
 }
@@ -138,7 +144,7 @@ h2{
 }
 
 div.separateur {
-    background-color: #979797;
+    background-color: var(--color1);
     height: 1px;
     width: 150px;
     position: relative;
@@ -146,3 +152,37 @@ div.separateur {
     margin-left: -75px;
 }
 
+.col40{
+    width: 40%;
+}
+
+.col60{
+    width: 60%;
+}
+
+.float-right{ /*fenêtre flottante à droite pour éviter la superposition*/
+    float: right;
+}
+
+div.texte-avec-bordure-left {
+    border-left: 2px solid var(--color1);
+    padding-left: 8px;
+    height: 100%;
+    display: inline-block; /*pour éviter que le texte en dessous de la bordure déborde sur celui du dessus*/
+}
+
+div.texte-avec-bordure-left p{
+    margin-top: 0px;
+}
+
+div.barre-verticale{
+    height: 309px;
+    width: 2px;
+    background-color: var(--color1);
+}
+
+td.trait-vertical{
+    padding-top: 0; 
+    padding-bottom: 5px; 
+    padding-right: 4px;
+}
