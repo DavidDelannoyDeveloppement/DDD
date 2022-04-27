@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{ D D D }</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!--COUVERTURE-->
+<div class="cover">        
+    <div>
+        <h1><c>{ D</c>avid <c>D</c>elannoy <c>D</c>éveloppement <c>}</c>
+        <a class="contact-button" href="mailto:daviddelannoydeveloppement@gmail.com?subject=Prise%20de%20contact%20depuis%20le%20site%20{DDD}">ME CONTACTER</a>    
+        </h1>
+    </div>
+
+    <div style="text-align: center;">
+        <p class="logo">{ D D D }</p>
+    </div>
+    
+</div>
+
+    <!--SECTION GRISE N#1-->
+    <div class="section section-grise1">
+        <div class="separateur"></div>
+        <p>Je développe votre <b>site Web</b> selon vos <b>envies</b> et vos <b>besoins</b></p>
+        <div class="separateur"></div>
+
+    </div>
+
+    <!--SECTION BLANCHE-->
+    <div class="section">
+        <h2>En savoir plus</h2>
+        
+        <img src="portrait-1.jpg" class="col-contenu"/>
+
+        <div class="col-contenu float-right">
+            <!--appel de la colonne à 60%, flottante doite, padding gauche inclus dans les 60% grâce aux box-sizing:border-box demandé au scripte total ! -->
+            
+            <div class="texte-avec-bordure-left">
+                <p >Reconverti après une carrière militaire de presque 20 ans, je suis maintenant développeur web et application.<br><br>Spécialisé dans les langages de type : Pyhton, HTML, CSS, PHP, MySQL, JAVASCRIPT, React et Django, je propose mes services personnalisés pour des missions de freelance.<br><br>Je peux réaliser toutes sortes de projets selon vos préférences et surtout vos besoins.</p>
+                <br>
+                <a href="https://www.linkedin.com/in/david-delannoy-developpement" target="blank">En savoir plus sur mon profil</a> <!--Attention de bien ajouter https:// avant le lien url en www. Et le target = blank pour ouvrir un nouvel onglet-->
+            </div>
+        </div>
+        
+    </div>
+
+    <!--SECTION GRISE N#2-->
+    <div class="section section-grise2">
+        <h2>Portfolio</h2>
+        <table class="colonne-portfolio" style="display: inline-block"> <!--Pour permettre à la seconde table de se placer à droite-->
+            <tr>
+                <td><div class="barre-verticale"></div></td>
+                <td style="width:100%"><a href="portfolio-site-restaurant.html"><img style="width: 100%" src="project1small.jpg"></a></td> <!--Le lien est associé à l'image via une balise-->
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><a href="portfolio-site-restaurant.html">Site web pour une pizzeria</a></td>
+            </tr>
+        </table>
+        <table class="colonne-portfolio float-right">
+            <tr>
+                <td><div class="barre-verticale"></div></td>
+                <td style="width: 100%; border: solid 1px black;"><a href="portfolio-site-evenementiel- Copie.html"><img style="width: 100%" src="site-evenementiel.png"></a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><a href="portfolio-site-evenementiel- Copie.html">Site de type évènementiel</a></td>
+            </tr>
+        </table>
+
+    </div>
+    
+    <!--SECTION BLANCHE-->
+    <iframe src="contact-frame.html" scrolling="no"></iframe> <!--La iframe est appelée mais du scrolling apparait. Pour corriger cela on définit dans le CSS une largeur et une hauteur (et la non bordure) ainsi que le non scrolling dans le style HTML-->
+    </div>
+
+</body>
+</html>
