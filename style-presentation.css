@@ -51,12 +51,16 @@ body {
 .accueil {
     display: flex;
     align-self: start;
-    color: rgb(255, 120, 0);
+    color: rgba(255, 240, 227, 0.8);
     font-family: 'Monotype Corsiva', var(--font-Parisienne);   
     font-size: 20px; 
     margin-left: 10px;
     margin-top: 10px;
     text-decoration: none;
+}
+
+.accueil::first-letter {
+    font-size: 60px;
 }
 
 
@@ -194,7 +198,7 @@ body {
 /*Footer customization*/
 
 .auteur { 
-    color: rgb(255, 245, 235);
+    color: rgba(255, 240, 227, 0.8);
     font-size: 14px; 
     text-align: center;
     margin: 20px 0 10px 0;
