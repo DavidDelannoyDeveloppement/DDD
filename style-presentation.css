@@ -1,0 +1,212 @@
+/*Preliminary*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --font-Parisienne :'Parisienne', cursive;
+    --font-Merriweather : 'Merriweather', serif;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(32, 32, 32);
+    background-image: url(./images/bg-blackboard-modifié-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+/*Home Header*/
+
+.header {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.932);
+}
+
+.logo {
+    display: flex;
+    color: rgb(255, 120, 0);
+    font-size: 40px;
+    font-family: 'Monotype Corsiva', var(--font-Parisienne);
+}
+
+
+.accueil {
+    display: flex;
+    align-self: start;
+    color: rgb(255, 120, 0);
+    font-family: 'Monotype Corsiva', var(--font-Parisienne);   
+    font-size: 20px; 
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+/*Container Cards*/
+.container {
+    display: flex;
+    justify-content: center;
+    column-gap: 10%;
+    row-gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    background-color: rgba(156, 156, 156, 0.55);
+    border-radius: 15px;
+    box-shadow: 4px 4px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+/*Cards customization*/
+.name-card {
+    text-align: center;
+    font-family: var(--font-Merriweather);
+    font-weight: 400;
+    color: rgba(255, 240, 227, 0.8);
+    margin: 10px 0;   
+}
+
+.name-card::first-letter {
+    color: rgb(255, 120, 0);
+    font-size: 40px;
+}
+
+.description {
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px 25px 20px;
+    font-family: var(--font-Merriweather);
+    font-weight: 400;
+    color: rgba(255, 240, 227, 0.8);
+}
+
+.description::first-letter {
+    color: rgb(255, 120, 0);
+    font-size: 28px;
+}
+
+
+.portrait {
+    width: 100px;
+    border-radius: 10%;
+    box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+/*Hr customization*/
+.hr-top {
+    width: 70%;
+    height: 1px;
+    margin: 120px 0 60px 0;
+    border: 0;
+    background: linear-gradient(-45deg, #EE7752, #00000041, #EE7752, #00000041);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+}
+
+.hr-bottom {
+    width: 70%;
+    height: 1px;
+    margin: 60px 0;
+    border: 0;
+    background: linear-gradient(-45deg, #00000041, #EE7752, #00000041, #EE7752);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+}
+  
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+ 
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+ 
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+
+/*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+/*Footer customization*/
+
+.auteur { 
+    color: rgb(255, 245, 235);
+    font-size: 14px; 
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.auteur c,a {
+    text-decoration: none; 
+}
+
+.ddd {
+    font-size: 16px; 
+    color: rgb(255, 120, 0);
+    font-family: 'Monotype Corsiva', var(--font-Parisienne);
+}
+
