@@ -10,6 +10,9 @@
 :root{
     --font-Parisienne :'Parisienne', cursive;
     --font-Merriweather : 'Merriweather', serif;
+    --main-color : rgb(255, 120, 0);
+    --text-color : rgba(255, 240, 227, 0.9);
+    --card-color : rgba(156, 156, 156, 0.55);
 }
 
 
@@ -42,7 +45,7 @@ body {
 
 .logo {
     display: flex;
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-size: 40px;
     font-family: 'Monotype Corsiva', var(--font-Parisienne);
 }
@@ -51,7 +54,7 @@ body {
 .accueil {
     display: flex;
     align-self: start;
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-family: 'Monotype Corsiva', var(--font-Parisienne);   
     font-size: 20px; 
     margin-left: 10px;
@@ -61,7 +64,7 @@ body {
 
 .subtitle {
     text-align: center;
-    color: rgba(255, 240, 227, 0.8);
+    color: var(--text-color);
     font-size: 40px;
     font-family: var(--font-Merriweather);
     font-weight: 400;    
@@ -70,7 +73,7 @@ body {
 }
 
 .subtitle::first-letter {
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-size: 50px;
 }
 
@@ -93,7 +96,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 400px;
-    background-color: rgba(156, 156, 156, 0.55);
+    background-color: var(--card-color);
     border-radius: 15px;
     box-shadow: 4px 4px 2px 3px rgba(0, 0, 0, 0.5);
 }
@@ -104,7 +107,7 @@ body {
     align-items: center;
     width: 300px;
     padding-bottom: 25px;
-    background-color: rgba(156, 156, 156, 0.55);
+    background-color: var(--card-color);
     border-radius: 15px;
     box-shadow: 4px 4px 2px 3px rgba(0, 0, 0, 0.5);
 }
@@ -116,12 +119,12 @@ body {
     text-align: center;
     font-family: var(--font-Merriweather);
     font-weight: 400;
-    color: rgba(255, 240, 227, 0.8);
+    color: var(--text-color);
     margin: 10px 0 30px 0;   
 }
 
 .name-card::first-letter {
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-size: 40px;
 }
 
@@ -131,16 +134,16 @@ body {
     padding: 20px 25px 25px 20px;
     font-family: var(--font-Merriweather);
     font-weight: 400;
-    color: rgba(255, 240, 227, 0.8);
+    color: var(--text-color);
 }
 
 .description::first-letter {
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-size: 28px;
 }
 
 .a-description {
-    color: rgba(255, 240, 227, 0.8);
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -156,11 +159,11 @@ body {
     text-align: center;
     font-family: var(--font-Merriweather);
     font-weight: 400;
-    color: rgba(255, 240, 227, 0.8);
+    color: var(--text-color);
     margin: 10px 0 10px 0;   
 }
 .name-card-fm::first-letter {
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-size: 40px;
 }
 
@@ -233,7 +236,7 @@ body {
 /*Footer customization*/
 
 .auteur { 
-    color: rgba(255, 240, 227, 0.8);
+    color: var(--text-color);
     font-size: 14px; 
     text-align: center;
     margin: 20px 0 10px 0;
@@ -245,7 +248,7 @@ body {
 
 .ddd {
     font-size: 16px; 
-    color: rgb(255, 120, 0);
+    color: var(--main-color);
     font-family: 'Monotype Corsiva', var(--font-Parisienne);
 }
 
