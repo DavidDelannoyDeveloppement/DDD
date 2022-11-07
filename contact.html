@@ -6,7 +6,7 @@
   <meta name="description" content="Développeur Front-End, je développe votre site Web selon vos envies et vos besoins">
   <title>{ D D D }</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/lettre-transparent.png">
-  <link rel="stylesheet" href="style-presentation.css">
+  <link rel="stylesheet" href="style-contact.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400;1,700&family=Parisienne&display=swap" rel="stylesheet">
@@ -34,9 +34,93 @@
   <main class="container">
 
     <div class="card">
-      <h3 class="name-card">Formulaire de contact</h3>
-      
+      <h3 class="name-card">Formulaire de contact</h3><br>
 
+
+      <form method="post" action="mail.php">
+        <fieldset>
+          <legend> merci de bien vouloir remplir ce formulaire :</legend>
+    
+          <div class="champs">
+            <label for="emailInput"> Votre email* : </label>
+            <input type="email" name="email" placeholder="exemple@email.com" id="emailInput" required>
+          </div>
+    
+          <div class="champs">
+            <label for="nameInput"> Votre nom* : </label>
+            <input type="text" name="firstName" id="nameInput" required>
+          </div>
+
+          <div class="champs">
+            <label for="telNo">Votre numéro de téléphone :</label>
+            <input id="telNo" name="telNo" type="tel" size="15" minlength="10" maxlength="10">
+          </div>
+    
+    
+          <div class="champs">
+            <label> Vous recherchez, </label>
+            <div>
+              <input type="radio" name="choix" id="former" checked>
+              <label for="former"> un formateur</label>
+            </div>
+            <div>
+              <input type="radio" name="choix" id="developer">
+              <label for="developer"> un développeur</label>
+            </div>
+          </div>
+
+          <div class="champs">
+            <label> A qui est destinée cette recherche ?</label>
+            <div>
+              <input type="radio" name="recipient" id="myself" checked>
+              <label for="myself">vous</label>
+            </div>
+            <div>
+              <input type="radio" name="recipient" id="someone">
+              <label for="someone">un proche</label>
+            </div>
+          </div>
+    
+
+    
+          <div class="champs">
+            <label for="formation">Sélectionnez la ou les formations qui vous intéressent</label>
+            <select name="formation" id="formation" multiple>
+              <optgroup label="Mobile" >
+                <option>Module 1</option>
+                <option>Module 2</option>
+              </optgroup>
+              <optgroup label="Ordinateur">
+                <option>Module 1</option>
+                <option>Module 2</option>
+              </optgroup>
+            </select>
+          </div>
+    
+          <div class="champs">
+            <label for="message">Merci d'écrire en quelques mots ce que je peux faire ou réaliser pour vous*</label><br>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Tapez votre message ici" required></textarea>
+          </div>
+
+
+          <button class="button">Envoyer</button>
+
+          <p class="obligatoire">*Champs obligatoires</p><br>
+    
+    
+        </fieldset>
+      </form>
+
+      <?php
+      
+      ?>
+
+    
+
+
+
+
+    
     </div>
 
   </main>
