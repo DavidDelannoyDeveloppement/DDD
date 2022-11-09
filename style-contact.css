@@ -82,7 +82,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    max-width: 500px;
+    min-width: 300px;
+    width: 100%;
     background-color: var(--card-color);
     border-radius: 15px;
     box-shadow: 4px 4px 2px 3px rgba(0, 0, 0, 0.5);
@@ -123,6 +125,10 @@ body {
 /*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
 /*Form customization*/
 
+
+
+
+/* 
 legend {
     font-size: 14px;
     font-family: var(--font-Merriweather);
@@ -176,7 +182,7 @@ label::first-letter {
     font-family: var(--font-Merriweather);
     font-weight: 400;
     color: var(--text-color);
-}
+} */
 
 
 
