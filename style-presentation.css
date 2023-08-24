@@ -129,9 +129,22 @@ body {
 
 .icones {
     width: 30px;
+    filter: drop-shadow(2px 1px 3px rgb(255, 120, 0));
     margin-left: 5px;
 }
 
+
+.reseaux {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 1em;
+}
+
+.reseaux img {
+    width: 50px;
+    filter: drop-shadow(3px 2px 4px rgb(255, 120, 0));
+}
 
 /*§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
 /*Hr customization*/
@@ -206,6 +219,7 @@ body {
     width: 15px;
     filter: invert(45%) sepia(99%) saturate(1536%) hue-rotate(0deg) brightness(101%) contrast(106%);
 }
+
 
 
 
