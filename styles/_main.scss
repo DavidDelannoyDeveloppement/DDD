@@ -117,7 +117,7 @@ body {
 
 h2,
 .subtitle {
-  font-family: $font-ddd, $font-Parisienne;
+  font-family: $font-Merriweather;
   font-size: clamp(1.8rem, 1.2rem + 1.2vw, 2.4rem);
   color: $text-color;
   text-align: center;
@@ -192,7 +192,7 @@ h2,
     color: $text-color;
 
     &::first-letter {
-      color: $orange;
+      color: $bleu;
       font-size: 28px;
       line-height: 1;
     }
@@ -218,7 +218,7 @@ h2,
 }
 
 #rgpd-container h2 {
-  font-family: $font-ddd, $font-Parisienne;
+  font-family: $font-Merriweather;
   font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem);
   color: $text-color;
   letter-spacing: .1rem;
@@ -232,7 +232,31 @@ h2,
 
 #rgpd-container li {
   margin: 0.25rem 0;
+  &::first-letter {
+    color: $bleu;   // première lettre en bleu
+    font-weight: bold;
+  }
 }
+
+#rgpd-container p.cta-contact {
+  margin-top: clamp(1.5rem, 0.071rem + 3.81vw, 3.5rem);
+  padding: .9rem 1rem;
+  // background: rgba(255,120,0,.08);
+  border: 0.5px solid $orange;
+  border-left: 4px solid $orange;
+  border-radius: 8px;
+  font-size: clamp(1.05rem, 1rem + 0.6vw, 1.35rem);
+  line-height: 1.9;
+  font-weight: 600;
+
+  a {
+    color: $bleu;
+    text-decoration: underline;
+
+    &:hover { color: lighten($bleu, 8%); }
+  }
+}
+
 
 
 /* ===========================

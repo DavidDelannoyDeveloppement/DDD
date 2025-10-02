@@ -109,7 +109,7 @@ body {
 }
 h2,
 .subtitle {
-  font-family: "Monotype Corsiva", "Parisienne", cursive;
+  font-family: "Merriweather", serif;
   font-size: clamp(1.8rem, 1.2rem + 1.2vw, 2.4rem);
   color: rgba(255, 240, 227, 0.9);
   text-align: center;
@@ -180,7 +180,7 @@ h2::first-letter,
   color: rgba(255, 240, 227, 0.9);
 }
 .card .description::first-letter {
-  color: rgb(255, 120, 0);
+  color: #11a0ff;
   font-size: 28px;
   line-height: 1;
 }
@@ -203,7 +203,7 @@ h2::first-letter,
 }
 
 #rgpd-container h2 {
-  font-family: "Monotype Corsiva", "Parisienne", cursive;
+  font-family: "Merriweather", serif;
   font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem);
   color: rgba(255, 240, 227, 0.9);
   letter-spacing: 0.1rem;
@@ -217,6 +217,28 @@ h2::first-letter,
 
 #rgpd-container li {
   margin: 0.25rem 0;
+}
+#rgpd-container li::first-letter {
+  color: #11a0ff;
+  font-weight: bold;
+}
+
+#rgpd-container p.cta-contact {
+  margin-top: clamp(1.5rem, 0.071rem + 3.81vw, 3.5rem);
+  padding: 0.9rem 1rem;
+  border: 0.5px solid rgb(255, 120, 0);
+  border-left: 4px solid rgb(255, 120, 0);
+  border-radius: 8px;
+  font-size: clamp(1.05rem, 1rem + 0.6vw, 1.35rem);
+  line-height: 1.9;
+  font-weight: 600;
+}
+#rgpd-container p.cta-contact a {
+  color: #11a0ff;
+  text-decoration: underline;
+}
+#rgpd-container p.cta-contact a:hover {
+  color: rgb(57.8, 176.2857142857, 255);
 }
 
 /* ===========================
