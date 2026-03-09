@@ -20,7 +20,6 @@ a:focus {
   color: lighten($bleu, 10%);
 }
 
-
 body {
   display: flex;
   flex-direction: column;
@@ -62,7 +61,7 @@ body {
       flex-wrap: nowrap;
       white-space: nowrap;
       margin: 0 10px;
-      flex-shrink: 0; /* ne se réduit jamais */
+      flex-shrink: 0;
       text-align: center;
 
       .word-logo-title {
@@ -93,7 +92,6 @@ body {
       padding: clamp(0.5rem, 0.357rem + 0.381vw, 0.7rem)
                clamp(1rem, 0.7rem + 0.9vw, 1.6rem);
       font-size: clamp(1rem, 0.96rem + 0.25vw, 1.15rem);
-
       border-radius: 8px;
       font-family: $font-Merriweather;
       font-weight: bold;
@@ -114,7 +112,6 @@ body {
   to { opacity: 1; }
 }
 
-
 h2,
 .subtitle {
   font-family: $font-Merriweather;
@@ -131,7 +128,6 @@ h2,
   }
 }
 
-
 /* ===========================
    Layout principal
 =========================== */
@@ -145,7 +141,7 @@ h2,
 }
 
 /* ===========================
-   Cartes (si utilisées)
+   Cartes génériques (si utilisées ailleurs)
 =========================== */
 .card {
   display: flex;
@@ -187,7 +183,6 @@ h2,
     text-align: justify;
     padding: 0;
     margin-top: 0.25rem;
-
     font-family: $font-Merriweather;
     color: $text-color;
 
@@ -201,10 +196,12 @@ h2,
 
 #contact-card {
   width: 32rem;
-  // width: clamp(12.5rem, -0.893rem + 35.714vw, 31.25rem);
   height: auto;
 }
 
+/* ===========================
+   Ancien container textuel
+=========================== */
 #rgpd-container {
   display: block;
   width: 85%;
@@ -232,8 +229,9 @@ h2,
 
 #rgpd-container li {
   margin: 0.25rem 0;
+
   &::first-letter {
-    color: $bleu;   // première lettre en bleu
+    color: $bleu;
     font-weight: bold;
   }
 }
@@ -241,7 +239,6 @@ h2,
 #rgpd-container p.cta-contact {
   margin-top: clamp(1.5rem, 0.071rem + 3.81vw, 3.5rem);
   padding: .9rem 1rem;
-  // background: rgba(255,120,0,.08);
   border: 0.5px solid $orange;
   border-left: 4px solid $orange;
   border-radius: 8px;
@@ -253,11 +250,193 @@ h2,
     color: $bleu;
     text-decoration: underline;
 
-    &:hover { color: lighten($bleu, 8%); }
+    &:hover {
+      color: lighten($bleu, 8%);
+    }
   }
 }
 
+/* ===========================
+   Catalogue
+=========================== */
+#catalogue-container {
+  display: block;
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.catalogue-hero {
+  margin-bottom: 2rem;
+}
+
+.catalogue-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: clamp(1.05rem, 1rem + 0.45vw, 1.3rem);
+  padding: 1.2rem 1.3rem;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid $orange;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 1.35rem 1.25rem 1.4rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(2px);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 149, 0, 0.4);
+    background: rgba(255, 255, 255, 0.09);
+  }
+
+  h2 {
+    text-align: left;
+    margin: 0;
+    font-size: clamp(1.45rem, 1.2rem + 0.5vw, 1.9rem);
+    line-height: 1.25;
+
+    &::first-letter {
+      color: $orange;
+      font-size: inherit;
+    }
+  }
+}
+
+.service-card-featured {
+  // border: 1px solid rgba(255, 149, 0, 0.45);
+  box-shadow: 0 10px 26px rgba(255, 140, 0, 0.12);
+
+  .service-price {
+    background: rgba(255, 140, 0, 0.16);
+    border-color: rgba(255, 149, 0, 0.4);
+  }
+}
+
+.service-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.service-number {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  color: $bleu;
+  font-weight: 700;
+}
+
+.service-price {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: $orange;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.service-hook {
+  line-height: 1.75;
+  font-size: 1rem;
+  color: $text-color;
+  opacity: 0.98;
+}
+
+.service-block {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid rgba(255, 149, 0, 0.65);
+
+  h3 {
+    margin-bottom: 0.55rem;
+    color: $orange;
+    font-size: 1.05rem;
+    font-family: $font-Merriweather;
+  }
+
+  ul {
+    padding-left: 1.1rem;
+    line-height: 1.65;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+
+    &::marker {
+      color: $bleu;
+    }
+  }
+}
+
+.catalogue-outro {
+  width: 100%;
+  max-width: 900px;
+  margin: 2.2rem auto 0;
+  text-align: center;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .cta-contact {
+    margin-top: clamp(1.5rem, 0.071rem + 3.81vw, 3.5rem);
+    padding: .9rem 1rem;
+    border: 0.5px solid $orange;
+    border-left: 4px solid $orange;
+    border-radius: 8px;
+    font-size: clamp(1.05rem, 1rem + 0.6vw, 1.35rem);
+    line-height: 1.9;
+    font-weight: 600;
+    text-align: left;
+
+    a {
+      color: $bleu;
+      text-decoration: underline;
+
+      &:hover {
+        color: lighten($bleu, 8%);
+      }
+    }
+  }
+}
 
 /* ===========================
    Section Présentation / Services
@@ -372,7 +551,10 @@ h2,
     box-shadow: 2px 2px 6px rgba(0,0,0,.35);
     transition: transform .2s ease, box-shadow .2s ease;
 
-    &:hover { transform: translateY(-3px); box-shadow: 3px 6px 12px rgba(0,0,0,.4); }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 3px 6px 12px rgba(0,0,0,.4);
+    }
 
     img {
       width: 38px;
@@ -403,11 +585,13 @@ h2,
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 @-moz-keyframes Gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 @keyframes Gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -497,6 +681,11 @@ h2,
       }
     }
   }
+
+  .catalogue-grid {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -518,7 +707,6 @@ h2,
       }
     }
 
-    /* ↘ rien à toucher ici : taille mobile du bouton reste celle que tu aimais */
     .btn-contact {
       width: 100%;
       max-width: 200px;
@@ -548,6 +736,33 @@ h2,
     width: 92%;
     grid-template-columns: repeat(3, 1fr);
 
-    a { width: 100%; }
+    a {
+      width: 100%;
+    }
+  }
+
+  #catalogue-container {
+    width: 92%;
+  }
+
+  .catalogue-intro {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  .service-card-top {
+    align-items: flex-start;
+  }
+
+  .catalogue-outro {
+    .cta-contact {
+      text-align: left;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
   }
 }
