@@ -132,7 +132,8 @@ p {
 }
 
 .bouton:hover {
-	background:#ffa263;
+	// background:#ffa263;
+	// background-color: var(--bleu);
 	transform:translateY(-2px);
 }
 
@@ -504,7 +505,9 @@ nav>a[aria-current="page"]:not(.bouton),nav>a:hover {
 	background:var(--orange);
 	color:#1c2327;
 	border-radius:12px;
-	margin-bottom:95px;
+	// margin-top:95px;
+	// margin-bottom:95px;
+	margin: clamp(2rem, 1.286rem + 1.905vw, 3rem) auto;
 	padding:55px 60px;
 	display:flex;
 	align-items:center;
@@ -1029,7 +1032,7 @@ footer {
 		flex-direction:column;
 		align-items:start;
 		padding:30px;
-		margin-bottom:60px;
+		// margin-bottom:60px;
 		gap:25px;
 	}
 	.introduction-page {
@@ -1201,8 +1204,8 @@ footer {
 }
 
 .introduction-suivi-client .bouton {
-	background: var(--bleu);
-	border-color: var(--bleu);
+	background: var(--orange);
+	border-color: var(--orange);
 }
 
 .lien-texte:hover {
