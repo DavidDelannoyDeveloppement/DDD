@@ -1,3 +1,1340 @@
-@use "variables";
-@use "mixins";
-@use "main";
+/* Styles DDD — source SCSS compatible CSS. Indentation par tabulations. */
+:root {
+	--fond:#000000;
+	--surface:#1b1e21;
+	--texte:#f4f5f5;
+	--secondaire:#b5bbc0;
+	--orange:#ff7800;
+	--bleu:#11a0ff;
+	--bord:#34383c;
+	--clair:#f1f3f4;
+	--encre:#202428;
+	--largeur:1180px;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+html {
+	scroll-behavior:smooth;
+	scroll-padding-top:110px;
+}
+
+body {
+	margin:0;
+	background:var(--fond);
+	color:var(--texte);
+	font-family:Inter,"Segoe UI",Arial,sans-serif;
+	font-size:16px;
+	line-height:1.65;
+}
+
+a {
+	color:inherit;
+	text-decoration:none;
+}
+
+button,input,select {
+	font:inherit;
+}
+
+button,a,select {
+	-webkit-tap-highlight-color:transparent;
+}
+
+button {
+	cursor:pointer;
+}
+
+img {
+	max-width:100%;
+}
+
+h1,h2,h3,p {
+	margin:0;
+}
+
+p+p {
+	margin-top:1rem;
+}
+
+h1,h2,h3 {
+	line-height:1.12;
+	letter-spacing:-.045em;
+}
+
+h1 {
+	font-size:clamp(2.9rem,5.9vw,5.1rem);
+	font-weight:750;
+}
+
+h1 span {
+	color:var(--orange);
+}
+
+h2 {
+	font-size:clamp(2rem,3.4vw,3rem);
+	font-weight:650;
+}
+
+h3 {
+	font-size:1.4rem;
+	font-weight:650;
+	letter-spacing:-.025em;
+}
+
+p {
+	color:var(--secondaire);
+}
+
+.conteneur {
+	width:min(var(--largeur),calc(100% - 64px));
+	margin-inline:auto;
+}
+
+.section {
+	padding-block:95px;
+}
+
+.surtitre {
+	font-size:.78rem;
+	letter-spacing:.14em;
+	text-transform:uppercase;
+	font-weight:650;
+	margin-bottom:23px;
+	color:var(--orange);
+}
+
+.introduction {
+	font-size:1.15rem;
+	line-height:1.65;
+}
+
+.largeur-reduite {
+	max-width:730px;
+}
+
+.bouton {
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	min-height:52px;
+	padding:13px 23px;
+	background:var(--orange);
+	border:1px solid var(--orange);
+	color:#181b1e;
+	border-radius:7px;
+	font-size:.94rem;
+	font-weight:700;
+	line-height:1.4;
+	transition:background .2s,transform .2s;
+}
+
+.bouton:hover {
+	background:#ffa263;
+	transform:translateY(-2px);
+}
+
+.bouton.compact {
+	padding:11px 17px;
+	min-height:44px;
+	font-size:.86rem;
+}
+
+.lien-texte {
+	display:inline-block;
+	border-bottom:1px solid currentColor;
+	padding-bottom:3px;
+	font-size:.94rem;
+	font-weight:600;
+}
+
+.lien-texte:hover {
+	color:var(--orange);
+}
+
+a:focus-visible,button:focus-visible,select:focus-visible {
+	outline:3px solid var(--orange);
+	outline-offset:5px;
+}
+
+.lien-evitement {
+	position:fixed;
+	top:-100px;
+	left:20px;
+	z-index:20;
+	background:var(--orange);
+	color:#111;
+	padding:12px;
+}
+
+.lien-evitement:focus {
+	top:10px;
+}
+
+header {
+	background:var(--fond);
+	border-bottom:1px solid #2a2e31;
+	position:sticky;
+	top:0;
+	z-index:10;
+}
+
+.barre-navigation {
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:30px;
+	min-height:94px;
+}
+
+.signature {
+	display:flex;
+	gap:12px;
+	align-items:center;
+}
+
+.signature img {
+	object-fit:contain;
+}
+
+.signature span {
+	font-size:.9rem;
+	line-height:1.4;
+	font-weight:600;
+	letter-spacing:.02em;
+}
+
+.signature strong {
+	display:block;
+	font-size:.73rem;
+	font-weight:400;
+	color:var(--secondaire);
+}
+
+nav {
+	display:flex;
+	align-items:center;
+	gap:27px;
+	font-size:.87rem;
+}
+
+nav>a:not(.bouton) {
+	padding-block:15px;
+	color:var(--secondaire);
+}
+
+nav>a[aria-current="page"]:not(.bouton),nav>a:hover {
+	color:var(--orange);
+}
+
+.bouton-menu {
+	display:none;
+}
+
+.accueil-introduction {
+	display:grid;
+	grid-template-columns:1.12fr 1fr;
+	gap:75px;
+	padding-block:87px 95px;
+	align-items:center;
+}
+
+.texte-introduction .introduction {
+	max-width:525px;
+	margin-top:28px;
+}
+
+.actions {
+	display:flex;
+	gap:26px;
+	align-items:center;
+	margin-top:34px;
+}
+
+.note-introduction {
+	margin-top:25px;
+	font-size:.84rem;
+	color:#989fa5;
+}
+
+.panneau-introduction {
+	background:var(--surface);
+	border:1px solid var(--bord);
+	border-radius:14px;
+	position:relative;
+	overflow:hidden;
+	box-shadow:0 25px 60px #0003;
+}
+
+.panneau-entete {
+	display:flex;
+	justify-content:space-between;
+	padding:22px 28px;
+	border-bottom:1px solid var(--bord);
+	font-size:.68rem;
+	letter-spacing:.08em;
+	color:var(--secondaire);
+}
+
+.panneau-entete>span:first-child {
+	font-weight:750;
+	color:var(--orange);
+	font-size:.9rem;
+	letter-spacing:.16em;
+}
+
+.panneau-titre {
+	font-size:2.3rem;
+	line-height:1.15;
+	letter-spacing:-.04em;
+	padding:29px 32px 21px;
+}
+
+.panneau-titre em {
+	font-style:normal;
+	color:var(--orange);
+}
+
+.panneau-ligne {
+	display:flex;
+	align-items:center;
+	gap:25px;
+	margin:0 32px;
+	padding:20px 0;
+	border-bottom:1px solid var(--bord);
+}
+
+.numero {
+	font-family:Consolas,monospace;
+	font-size:.8rem;
+	color:var(--orange);
+	letter-spacing:.05em;
+}
+
+.panneau-ligne .numero {
+	background:#ff8a3614;
+	border:1px solid #ff8a3633;
+	width:41px;
+	height:41px;
+	display:grid;
+	place-items:center;
+	border-radius:8px;
+	flex-shrink:0;
+}
+
+.panneau-ligne strong,.panneau-ligne div>span {
+	display:block;
+}
+
+.panneau-ligne strong {
+	font-size:1.05rem;
+}
+
+.panneau-ligne div>span {
+	font-size:.83rem;
+	color:var(--secondaire);
+	margin-top:3px;
+}
+
+.panneau-pied {
+	padding:24px 32px;
+	font-size:.8rem;
+	color:var(--secondaire);
+}
+
+.bandeau-expertises {
+	border-block:1px solid var(--bord);
+}
+
+.bandeau-expertises .conteneur {
+	display:flex;
+	justify-content:space-between;
+	gap:20px;
+	padding-block:23px;
+	color:var(--secondaire);
+	font-size:.81rem;
+}
+
+.entete-section {
+	display:flex;
+	align-items:end;
+	justify-content:space-between;
+	gap:40px;
+	margin-bottom:42px;
+}
+
+.entete-section .lien-texte {
+	flex-shrink:0;
+}
+
+.grille-services {
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	gap:35px;
+	margin-top:38px;
+}
+
+.grille-services article {
+	border-top:1px solid var(--bord);
+	padding-top:25px;
+}
+
+.grille-services h3 {
+	margin:22px 0 15px;
+}
+
+.grille-services p {
+	font-size:.95rem;
+}
+
+.section-projets {
+	background:#101418;
+	color:var(--texte);
+	border-block:1px solid var(--bord);
+}
+
+.section-projets p {
+	color:var(--secondaire);
+}
+
+.section-projets .surtitre {
+	color:var(--orange);
+}
+
+.grille-projets {
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:32px;
+}
+
+.projet {
+	border:1px solid var(--bord);
+	border-radius:12px;
+	overflow:hidden;
+}
+
+.section-projets .projet {
+	border-color:var(--bord);
+	background:var(--surface);
+}
+
+.visuel-projet {
+	height:290px;
+	padding:27px 32px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.libelle-visuel {
+	font:12px Consolas,monospace;
+	letter-spacing:.1em;
+}
+
+.visuel-projet>strong {
+	font-size:3.3rem;
+	line-height:1;
+	letter-spacing:-.055em;
+}
+
+.visuel-projet strong span {
+	display:block;
+	font-size:1.05rem;
+	font-weight:400;
+	line-height:1.4;
+	margin-top:17px;
+	letter-spacing:0;
+}
+
+.pied-visuel {
+	font-size:.76rem;
+}
+
+.gestion-commerciale {
+	background:#263f4c;
+	color:#f6f5ed;
+}
+
+.gestion-commerciale .libelle-visuel {
+	color:#c6d4db;
+}
+
+.suivi-client {
+	background:#ff8a36;
+	color:#1d2429;
+}
+
+.suivi-client>strong {
+	font-size:5rem;
+	font-weight:750;
+}
+
+.texte-projet {
+	padding:30px 32px;
+}
+
+.texte-projet .surtitre {
+	margin-bottom:13px;
+	font-size:.7rem;
+}
+
+.texte-projet p:not(.surtitre) {
+	margin:16px 0 23px;
+	font-size:.94rem;
+}
+
+.presentation-personnelle {
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:65px;
+}
+
+.presentation-personnelle .introduction {
+	color:var(--texte);
+	margin-bottom:24px;
+}
+
+.presentation-personnelle .lien-texte {
+	margin-top:24px;
+}
+
+.bandeau-contact {
+	background:var(--orange);
+	color:#1c2327;
+	border-radius:12px;
+	margin-bottom:95px;
+	padding:55px 60px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:40px;
+}
+
+.bandeau-contact .surtitre {
+	color:#643013;
+	margin-bottom:15px;
+}
+
+.bandeau-contact p {
+	color:#50321f;
+	max-width:530px;
+	margin-top:20px;
+}
+
+.bandeau-contact .bouton {
+	background:#1b2228;
+	color:white;
+	border-color:#1b2228;
+	flex-shrink:0;
+}
+
+.bandeau-contact .bouton:hover {
+	background:#303a43;
+}
+
+footer {
+	border-top:1px solid var(--bord);
+	padding-block:40px;
+}
+
+.pied-page {
+	display:flex;
+	align-items:center;
+	gap:40px;
+	justify-content:space-between;
+	font-size:.78rem;
+	color:var(--secondaire);
+}
+
+.marque-ddd {
+	font:700 1.15rem Georgia,serif;
+	color:var(--orange);
+	letter-spacing:.1em;
+}
+
+.pied-page p {
+	font-size:.78rem;
+}
+
+.introduction-page {
+	padding-block:80px 65px;
+}
+
+.introduction-page .introduction {
+	max-width:750px;
+	margin-top:27px;
+}
+
+.introduction-page .bouton {
+	margin-top:30px;
+}
+
+.liste-expertises {
+	padding-bottom:40px;
+}
+
+.liste-expertises>article {
+	display:grid;
+	grid-template-columns:120px 1fr;
+	border-top:1px solid var(--bord);
+	padding-block:44px;
+}
+
+.liste-expertises h2 {
+	font-size:2rem;
+	margin-bottom:20px;
+}
+
+.liste-expertises p {
+	max-width:700px;
+}
+
+.liste-expertises ul {
+	padding-left:20px;
+	color:var(--secondaire);
+	columns:2;
+	max-width:850px;
+	column-gap:45px;
+	margin-block:22px;
+}
+
+.liste-expertises li {
+	break-inside:avoid;
+	margin-bottom:8px;
+}
+
+.technologies {
+	font-size:.8rem;
+	letter-spacing:.03em;
+	color:var(--orange);
+}
+
+.cas-usage {
+	border-bottom:1px solid var(--bord);
+}
+
+.cas-usage>.introduction {
+	margin-top:25px;
+	max-width:880px;
+}
+
+.cas-usage>p:last-child {
+	margin-top:20px;
+}
+
+.demonstration {
+	background:var(--surface);
+	border:1px solid var(--bord);
+	border-radius:12px;
+	padding:32px;
+	margin-top:45px;
+}
+
+.demonstration .entete-section {
+	margin-bottom:25px;
+}
+
+.demonstration .surtitre {
+	margin-bottom:12px;
+}
+
+.etiquette {
+	display:inline-flex;
+	border:1px solid #ff8a3655;
+	color:var(--orange);
+	border-radius:5px;
+	padding:5px 10px;
+	font-size:.75rem;
+	line-height:1.5;
+}
+
+.onglets {
+	display:flex;
+	gap:10px;
+	border-bottom:1px solid var(--bord);
+	padding-bottom:15px;
+	margin-bottom:28px;
+}
+
+.onglets button {
+	background:transparent;
+	color:var(--secondaire);
+	border:1px solid var(--bord);
+	padding:10px 18px;
+	border-radius:6px;
+	font-size:.9rem;
+}
+
+.onglets button[aria-selected="true"] {
+	background:var(--orange);
+	color:#1b2228;
+	border-color:var(--orange);
+}
+
+.disposition-demonstration {
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	gap:40px;
+	min-height:165px;
+}
+
+.disposition-demonstration p {
+	margin-top:15px;
+}
+
+.disposition-demonstration label {
+	display:block;
+	margin-bottom:10px;
+	font-size:.85rem;
+}
+
+.disposition-demonstration select {
+	width:100%;
+	padding:12px;
+	background:var(--fond);
+	color:var(--texte);
+	border:1px solid var(--bord);
+	border-radius:5px;
+}
+
+.resultat-demonstration {
+	border-left:2px solid var(--orange);
+	padding-left:16px;
+}
+
+.note-secondaire {
+	font-size:.8rem;
+	margin:25px 0 15px;
+	color:var(--secondaire);
+}
+
+.exemple-document {
+	background:#f5f5f5;
+	color:#242a2f;
+	padding:25px;
+	border-radius:6px;
+}
+
+.exemple-document>span:first-child {
+	font-size:.7rem;
+	display:block;
+	letter-spacing:.1em;
+}
+
+.exemple-document strong {
+	display:block;
+	font-size:1.25rem;
+	margin-top:14px;
+}
+
+.exemple-document p {
+	color:#555f66;
+}
+
+.exemple-document .etiquette {
+	color:#8d3c00;
+	margin-top:10px;
+	border-color:#bf8c67;
+}
+
+.liste-pieces {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.liste-pieces li {
+	display:flex;
+	justify-content:space-between;
+	gap:10px;
+	border-bottom:1px solid var(--bord);
+	padding:13px 0;
+	font-size:.9rem;
+}
+
+.liste-pieces span {
+	color:#bed5c2;
+}
+
+.liste-pieces .en-attente {
+	color:var(--orange);
+}
+
+[hidden] {
+	display:none!important;
+}
+
+.introduction-suivi-client {
+	border-bottom:1px solid var(--bord);
+}
+
+.nom-produit {
+	color:var(--orange);
+	font-size:6rem;
+	line-height:1;
+	letter-spacing:-.07em;
+	font-weight:750;
+	margin-bottom:30px;
+	display:flex;
+	align-items:center;
+	gap:20px;
+}
+
+.nom-produit span {
+	font-size:.85rem;
+	color:var(--secondaire);
+	font-weight:400;
+	letter-spacing:0;
+}
+
+.introduction-suivi-client h1 {
+	font-size:clamp(2.8rem,5vw,4.6rem);
+}
+
+.parcours-client {
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	gap:24px;
+	margin-block:45px;
+}
+
+.parcours-client article {
+	border:1px solid var(--bord);
+	border-radius:8px;
+	padding:25px;
+}
+
+.parcours-client span {
+	color:var(--orange);
+	font:14px Consolas,monospace;
+}
+
+.parcours-client h3 {
+	margin:24px 0 15px;
+}
+
+.parcours-client p {
+	font-size:.9rem;
+}
+
+.encadre {
+	border:1px solid var(--bord);
+	border-radius:8px;
+	padding:30px;
+	margin-block:28px;
+	background:var(--surface);
+}
+
+.encadre h3 {
+	margin-block:20px 18px;
+}
+
+.encadre p {
+	max-width:840px;
+}
+
+.encadre .lien-texte {
+	margin-top:20px;
+}
+
+.grille-contact {
+	display:grid;
+	grid-template-columns:.8fr 1.2fr;
+	gap:60px;
+	padding-bottom:85px;
+}
+
+.grille-contact h2 {
+	font-size:1.9rem;
+	margin-bottom:25px;
+}
+
+.grille-contact aside>p {
+	margin-block:24px;
+}
+
+.adresse-courriel {
+	overflow-wrap:anywhere;
+	max-width:100%;
+}
+
+.encadre-formulaire {
+	border:1px solid var(--bord);
+	padding:32px;
+	border-radius:12px;
+	background:var(--surface);
+}
+
+.encadre-formulaire .bouton {
+	display:flex;
+	margin-top:25px;
+}
+
+.encadre-formulaire>.lien-texte {
+	margin-top:20px;
+}
+
+.encadre-formulaire iframe {
+	width:100%;
+	height:1250px;
+	border:0;
+	background:#fff;
+	border-radius:8px;
+	margin-top:25px;
+}
+
+.informations-legales {
+	max-width:850px;
+	padding-bottom:80px;
+}
+
+.informations-legales h2 {
+	font-size:1.5rem;
+	margin-block:35px 20px;
+}
+
+.informations-legales a {
+	overflow-wrap:anywhere;
+	text-decoration:underline;
+}
+
+.informations-legales ul {
+	color:var(--secondaire);
+}
+
+#contexte-contact:empty {
+	display:none;
+}
+
+@media(min-width:1450px) {
+	.accueil-introduction {
+		padding-block:110px 120px;
+	}
+}
+
+@media(max-width:1050px) {
+	nav {
+		gap:17px;
+	}
+	.accueil-introduction {
+		gap:35px;
+	}
+	.accueil-introduction h1 {
+		font-size:3.8rem;
+	}
+	.accueil-introduction .actions {
+		align-items:start;
+		flex-direction:column;
+		gap:17px;
+	}
+	.panneau-titre {
+		font-size:2rem;
+	}
+	.bandeau-contact {
+		padding:40px;
+	}
+	.pied-page {
+		gap:22px;
+		flex-wrap:wrap;
+	}
+	.parcours-client {
+		grid-template-columns:1fr 1fr;
+	}
+}
+
+@media(max-width:800px) {
+	.conteneur {
+		width:calc(100% - 40px);
+	}
+	.barre-navigation {
+		min-height:80px;
+		gap:15px;
+		flex-wrap:wrap;
+	}
+	.bouton-menu {
+		display:block;
+		border:1px solid var(--bord);
+		background:var(--surface);
+		color:var(--texte);
+		border-radius:6px;
+		padding:8px 13px;
+	}
+	.barre-navigation nav {
+		display:none;
+		width:100%;
+		flex-direction:column;
+		align-items:stretch;
+		gap:4px;
+		padding-bottom:20px;
+	}
+	.barre-navigation nav.ouverte {
+		display:flex;
+	}
+	.barre-navigation nav>a {
+		padding:12px;
+	}
+	.accueil-introduction {
+		grid-template-columns:1fr;
+		padding-block:55px;
+		gap:45px;
+	}
+	.accueil-introduction h1 {
+		font-size:clamp(2.7rem,8vw,4.5rem);
+	}
+	.texte-introduction .introduction {
+		max-width:620px;
+	}
+	.accueil-introduction .actions {
+		flex-direction:row;
+		align-items:center;
+		flex-wrap:wrap;
+	}
+	.panneau-introduction {
+		max-width:600px;
+		width:100%;
+	}
+	.bandeau-expertises .conteneur {
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		gap:15px;
+	}
+	.section {
+		padding-block:60px;
+	}
+	.entete-section {
+		align-items:start;
+		flex-direction:column;
+		gap:22px;
+	}
+	.grille-services {
+		grid-template-columns:1fr;
+		gap:28px;
+	}
+	.grille-services h3 {
+		margin-top:16px;
+	}
+	.grille-projets {
+		grid-template-columns:1fr;
+	}
+	.visuel-projet {
+		height:260px;
+	}
+	.presentation-personnelle {
+		grid-template-columns:1fr;
+		gap:28px;
+	}
+	.bandeau-contact {
+		flex-direction:column;
+		align-items:start;
+		padding:30px;
+		margin-bottom:60px;
+		gap:25px;
+	}
+	.introduction-page {
+		padding-block:55px;
+	}
+	.liste-expertises>article {
+		grid-template-columns:40px 1fr;
+	}
+	.liste-expertises ul {
+		columns:1;
+	}
+	.disposition-demonstration,.grille-contact {
+		grid-template-columns:1fr;
+		gap:30px;
+	}
+	.demonstration {
+		padding:22px;
+	}
+	.onglets {
+		flex-wrap:wrap;
+	}
+	.grille-contact {
+		padding-bottom:60px;
+	}
+	.pied-page {
+		align-items:start;
+		flex-direction:column;
+		gap:22px;
+	}
+	.encadre-formulaire {
+		padding:23px;
+	}
+	.liste-pieces li {
+		flex-wrap:wrap;
+	}
+	.parcours-client {
+		gap:15px;
+	}
+	.parcours-client article {
+		padding:20px;
+	}
+	.surtitre {
+		line-height:1.7;
+	}
+}
+
+@media(max-width:420px) {
+	.parcours-client {
+		grid-template-columns:1fr;
+	}
+	.signature span {
+		font-size:.8rem;
+	}
+	.signature img {
+		width:42px;
+		height:42px;
+	}
+	.accueil-introduction .actions {
+		flex-direction:column;
+		align-items:start;
+	}
+	.bandeau-expertises .conteneur {
+		grid-template-columns:1fr;
+	}
+	.visuel-projet,.texte-projet {
+		padding:25px;
+	}
+	.visuel-projet>strong {
+		font-size:2.7rem;
+	}
+	.visuel-projet.suivi-client>strong {
+		font-size:4.5rem;
+	}
+}
+
+@media(prefers-reduced-motion:reduce) {
+	html {
+		scroll-behavior:auto;
+	}
+	* {
+		transition:none!important;
+	}
+}
+
+.signature>span {
+	font-family: 'Monotype Corsiva', 'Parisienne', 'Segoe Script', cursive;
+	font-weight: 400;
+	font-size: 1.55rem;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+.signature .nom-signature {
+	display: block;
+}
+
+.signature strong {
+	font: inherit;
+	color: var(--orange);
+	font-size: inherit;
+}
+
+.signature b {
+	font-weight: 400;
+	color: var(--orange);
+}
+
+.signature strong b {
+	color: var(--orange);
+}
+
+.signature img {
+	width: 56px;
+	height: 56px;
+}
+
+.marque-ddd {
+	font-family: 'Monotype Corsiva', 'Parisienne', cursive;
+	font-size: 1.6rem;
+}
+
+.bandeau-expertises {
+	border-top-color: var(--bleu);
+}
+
+.panneau-titre em {
+	color: var(--bleu);
+}
+
+.panneau-ligne:nth-of-type(4) .numero {
+	color: var(--bleu);
+	background: #11a0ff14;
+	border-color: #11a0ff55;
+}
+
+.grille-services article:nth-child(2) .numero {
+	color: var(--bleu);
+}
+
+.grille-services article:nth-child(2) {
+	border-top-color: var(--bleu);
+}
+
+.gestion-commerciale {
+	background: #113c59;
+}
+
+.gestion-commerciale>strong {
+	font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.suivi-client {
+	background: var(--bleu);
+	color: #0b202c;
+}
+
+.suivi-client>strong {
+	font-size: clamp(2rem, 3.3vw, 3rem);
+}
+
+.nom-produit {
+	color: var(--bleu);
+	font-size: clamp(2.5rem, 6vw, 5rem);
+	letter-spacing: -.05em;
+}
+
+.introduction-suivi-client h1 span {
+	color: var(--bleu);
+}
+
+.introduction-suivi-client .bouton {
+	background: var(--bleu);
+	border-color: var(--bleu);
+}
+
+.lien-texte:hover {
+	color: var(--bleu);
+}
+
+nav>a[aria-current="page"]:not(.bouton),nav>a:hover {
+	color: var(--bleu);
+}
+
+.parcours-client article:nth-child(even) {
+	border-top-color: var(--bleu);
+}
+
+.parcours-client article:nth-child(even)>span {
+	color: var(--bleu);
+}
+
+@media(max-width: 1050px) {
+	.barre-navigation {
+		gap: 20px;
+	}
+	nav {
+		gap: 15px;
+	}
+}
+
+@media(max-width: 420px) {
+	.signature>span {
+		font-size: 1.3rem;
+	}
+	.signature strong {
+		font-size: inherit;
+	}
+	.signature img {
+		width: 42px;
+		height: 42px;
+	}
+	.visuel-projet.suivi-client>strong,.visuel-projet.gestion-commerciale>strong {
+		font-size: 2.1rem;
+	}
+}
+
+
+.signature .nom-signature {
+	font: inherit;
+	line-height: inherit;
+}
+
+/* Signature cursive : texte blanc, initiales orange, taille uniforme. */
+.signature>span,
+.signature .nom-signature,
+.signature strong {
+	color: var(--texte);
+}
+
+.signature b,
+.signature strong b {
+	color: var(--orange);
+}
+.signature .nom-signature,
+.signature strong {
+	font: inherit;
+}
+.panneau-introduction {
+	padding-bottom: 15px;
+}
+/* Densité réduite pour un parcours plus rapide. */
+.section {
+	padding-block: 65px;
+}
+.visuel-projet {
+	height: 245px;
+}
+@media(max-width: 800px) {
+	.section {
+		padding-block: 45px;
+	}
+	.introduction-suivi-client h1 {
+		font-size: clamp(2.3rem, 6.5vw, 3.6rem);
+	}
+}
+
+/* Exemples généralistes : surfaces sobres et contraste homogène. */
+.exemples-projets .projet {
+	background: var(--surface);
+	border-top: 2px solid var(--orange);
+}
+.exemples-projets .projet:nth-child(even) {
+	border-top-color: var(--bleu);
+}
+.exemples-projets h2 {
+	font-size: clamp(1.45rem, 2.4vw, 2rem);
+	margin-bottom: 18px;
+}
+.exemples-projets .texte-projet p:last-child {
+	margin-bottom: 0;
+}
+.solution-resumee {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 35px;
+}
+.solution-resumee h2 {
+	font-size: clamp(1.6rem, 2.7vw, 2.4rem);
+	margin-bottom: 18px;
+}
+.solution-resumee .lien-texte {
+	flex-shrink: 0;
+}
+.bandeau-contact {
+	background: var(--surface);
+	border: 1px solid var(--bord);
+	border-left: 3px solid var(--bleu);
+	color: var(--texte);
+}
+.bandeau-contact .surtitre {
+	color: var(--bleu);
+}
+.bandeau-contact .bouton {
+	background: var(--orange);
+	border-color: var(--orange);
+	color: #000000;
+}
+.bandeau-contact .bouton:hover {
+	background: #ffa263;
+}
+@media(max-width: 800px) {
+	.solution-resumee {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 25px;
+	}
+}
