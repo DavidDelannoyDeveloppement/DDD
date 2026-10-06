@@ -1,86 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="Développeur Python et intégrateur, je développe vos algorithmes et votre site Web selon vos besoins.">
-  <title>David Delannoy Développement</title>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="David Delannoy Développement">
-  <meta property="og:description" content="Développeur Python & Web – Automatisation, rapports intelligents, intégration sur mesure.">
-  <meta property="og:image" content="./images/preview.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://daviddelannoydeveloppement.github.io/DDD/index.html">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/lettre-transparent.png">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400;1,700&family=Parisienne&display=swap" rel="stylesheet">
-
-  <!-- CSS compilé depuis Sass -->
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-
-<!-- ======== Home Header ======== -->
-<header class="header">
-  <div class="header-top">
-    <a href="./index.html">
-      <img src="./images/logo.png" alt="Logo DDD" class="logo-img">
-    </a>
-
-    <!-- H1 central -->
-    <h1 class="full-logo-title">
-      <span class="word-logo-title">
-        <span class="d">D</span>
-        <span class="logo-title">avid</span>
-      </span>
-      <span class="word-logo-title">
-        <span class="d">D</span>
-        <span class="logo-title">elannoy</span>
-      </span>
-      <span class="word-logo-title">
-        <span class="d">D</span>
-        <span class="logo-title">éveloppement</span>
-      </span>
-    </h1>
-
-    <a href="./contact.html" class="btn-contact">Me contacter</a>
-  </div>
-</header>
-
-<hr class="hr">
-
-<h2 class="subtitle">Contact</h2>
-
-
-<a href="#" title="return" class="up">
-  <img src="./images/up.png" alt="up-image" class="up-img">
-</a>
-<!-- ======== Cards ======== -->
-  <main class="container">
-
-    <div class="card" id="contact-card">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0_hz6lvUzcgvg-ySbsACrU6su0iIwNCbADLwpJXV8KsdCHQ/viewform?embedded=true" width="100%" height="1200px" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
-    </div>
-
-  </main>
-
-
-  <hr class="hr-bottom">
-
-
-<footer class="auteur">
-  <a class="auteur-left" href="./rgpd.html">CGU / Mentions légales</a>
-  <span class="auteur-right">Site créé par : <a href="https://daviddelannoydeveloppement.github.io/DDD/index.html" target="_blank" title="{ David Delannoy Développement }"><span class="ddd">{ D D D }</span></a></span>
-</footer>
-
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Contact · DDD</title>
+		<meta name="description" content="Parlez de votre projet à David Delannoy : applications métiers, automatisations et sites web.">
+		<meta property="og:title" content="Contact · David Delannoy Développement">
+		<meta property="og:description" content="Parlez de votre projet à David Delannoy : applications métiers, automatisations et sites web.">
+		<meta property="og:type" content="website">
+		<link rel="icon" href="images/lettre-transparent.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Parisienne&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/style.css">
+		<script src="js/script.js" defer></script>
+	</head>
+	<body>
+		<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+		<header>
+			<div class="conteneur barre-navigation">
+				<a class="signature" href="index.html" aria-label="DDD, accueil"><img src="images/logo.png" alt="" width="48" height="48"><span><span class="nom-signature"><b>D</b>avid <b>D</b>elannoy</span><strong><b>D</b>éveloppement</strong></span></a>
+				<button class="bouton-menu" aria-expanded="false" aria-controls="navigation">Menu</button>
+				<nav id="navigation" aria-label="Navigation principale">
+					<a href="index.html">Accueil</a>
+					<a href="presentation.html">Expertises</a>
+					<a href="projets.html">Projets</a>
+					<a href="solutions.html">Solutions</a>
+					<a class="bouton compact" href="contact.html" aria-current="page">Me contacter</a>
+				</nav>
+			</div>
+		</header>
+		<main id="contenu">
+			<section class="conteneur introduction-page">
+				<p class="surtitre">Contact</p>
+				<h1>Parlons de<br><span>votre projet.</span></h1>
+				<p class="introduction">Décrivez votre besoin. Je vous répondrai pour définir la suite.</p>
+			</section>
+			<section class="conteneur grille-contact">
+				<aside>
+					<h2>Un échange direct.</h2>
+					<p>David Delannoy<br>Développeur indépendant · Normandie</p>
+					<a class="lien-texte adresse-courriel" href="mailto:daviddelannoydeveloppement@gmail.com">daviddelannoydeveloppement@gmail.com</a>
+					<p><a class="lien-texte" href="tel:+33610031544">06 10 03 15 44</a></p>
+				</aside>
+				<div class="encadre-formulaire">
+					<h2>Votre projet, en quelques mots.</h2>
+					<p id="contexte-contact"></p>
+					<p>Par mail, téléphone ou via le formulaire Google.</p>
+					<a class="lien-texte" href="https://docs.google.com/forms/d/e/1FAIpQLSf0_hz6lvUzcgvg-ySbsACrU6su0iIwNCbADLwpJXV8KsdCHQ/viewform" target="_blank" rel="noopener">Ouvrir le formulaire dans un nouvel onglet</a>
+					<button class="bouton" id="afficher-formulaire" data-formulaire="https://docs.google.com/forms/d/e/1FAIpQLSf0_hz6lvUzcgvg-ySbsACrU6su0iIwNCbADLwpJXV8KsdCHQ/viewform?embedded=true">Afficher le formulaire Google</button>
+					<div id="conteneur-formulaire">
+					</div>
+					<p class="note-secondaire">Les informations transmises servent à répondre à votre demande. <a href="rgpd.html">Confidentialité</a></p>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="conteneur pied-page">
+				<a class="marque-ddd" href="index.html">{ D D D }</a>
+				<p>Des outils utiles. Un interlocuteur.<br>David Delannoy · Normandie</p>
+				<a href="rgpd.html">Mentions légales &amp; confidentialité</a>
+				<span>© 2026 DDD</span>
+			</div>
+		</footer>
+	</body>
 </html>

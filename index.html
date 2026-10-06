@@ -1,95 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <meta name="description" content="Développeur Python et intégrateur, je développe vos algorithmes et votre site Web selon vos besoins.">
-  <title>David Delannoy Développement</title>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="David Delannoy Développement">
-  <meta property="og:description" content="Développeur Python & Web – Automatisation, rapports intelligents, intégration sur mesure.">
-  <meta property="og:image" content="./images/preview.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://daviddelannoydeveloppement.github.io/DDD/index.html">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/lettre-transparent.png">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,400;1,700&family=Parisienne&display=swap" rel="stylesheet">
-
-  <!-- CSS compilé depuis Sass -->
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-
-<!-- ======== Home Header ======== -->
-<header class="header">
-  <div class="header-top">
-    <a href="./index.html">
-      <img src="./images/logo.png" alt="Logo DDD" class="logo-img">
-    </a>
-
-    <!-- H1 central -->
-    <h1 class="full-logo-title">
-      <span class="word-logo-title">
-        <span class="d">D</span>
-        <span class="logo-title">avid</span>
-      </span>
-      <span class="word-logo-title">
-        <span class="d">D</span>
-        <span class="logo-title">elannoy</span>
-      </span>
-      <span class="word-logo-title">
-        <span class="d">D</span>
-        <span class="logo-title">éveloppement</span>
-      </span>
-    </h1>
-
-    <a href="./contact.html" class="btn-contact">Me contacter</a>
-  </div>
-</header>
-
-<hr class="hr">
-
-<a href="#" title="return" class="up">
-  <img src="./images/up.png" alt="up-image" class="up-img">
-</a>
-
-<!-- ======== Cards ======== -->
-<main class="container">
-  <a href="./presentation.html" class="card" title="Présentation">
-    <h3 class="name-card">Des solutions adaptées à vos besoins</h3>
-    <img src="./images/presentation-480.webp" alt="Illustration de la vignette de présentation">
-    <p class="description">Je développe des outils sur mesure pour les entreprises : rapports automatisés, sites web et solutions métiers efficaces, conçus pour gagner du temps et améliorer vos performances.</p>
-  </a>
-
-  <!-- <a href="#" class="card" title="Portfolio">
-    <h3 class="name-card">Portfolio</h3>
-    <img src="./images/portfolio-480.webp" alt="Illustration de la vignette de présentation">
-    <p class="description">Parce qu'un bon croquis vaut mieux qu'un long discours, parcourez mon portfolio pour explorer mes réalisations.</p>
-  </a> -->
-
-  <a href="./contact.html" class="card" title="Contact">
-    <h3 class="name-card">Me contacter</h3>
-    <img src="./images/contact-480.webp" alt="Illustration de la vignette de présentation">
-    <p class="description">L'endroit idéal si vous souhaitez me contacter afin de discuter de votre projet.</p>
-  </a>
-
-</main>
-
-<hr class="hr">
-
-<footer class="auteur">
-  <a class="auteur-left" href="./rgpd.html">CGU / Mentions légales</a>
-  <span class="auteur-right">Site créé par : <a href="https://daviddelannoydeveloppement.github.io/DDD/index.html" target="_blank" title="{ David Delannoy Développement }"><span class="ddd">{ D D D }</span></a></span>
-</footer>
-
-
-</body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Applications métiers &amp; sites web sur mesure · DDD</title>
+		<meta name="description" content="David Delannoy crée des applications métiers, des automatisations et des sites web pour les indépendants et les petites entreprises.">
+		<meta property="og:title" content="Applications métiers &amp; sites web sur mesure · David Delannoy Développement">
+		<meta property="og:description" content="David Delannoy crée des applications métiers, des automatisations et des sites web pour les indépendants et les petites entreprises.">
+		<meta property="og:type" content="website">
+		<link rel="icon" href="images/lettre-transparent.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Parisienne&amp;display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/style.css">
+		<script src="js/script.js" defer></script>
+	</head>
+	<body>
+		<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+		<header>
+			<div class="conteneur barre-navigation">
+				<a class="signature" href="index.html" aria-label="DDD, accueil"><img src="images/logo.png" alt="" width="48" height="48"><span><span class="nom-signature"><b>D</b>avid <b>D</b>elannoy</span><strong><b>D</b>éveloppement</strong></span></a>
+				<button class="bouton-menu" aria-expanded="false" aria-controls="navigation">Menu</button>
+				<nav id="navigation" aria-label="Navigation principale">
+					<a href="index.html" aria-current="page">Accueil</a>
+					<a href="presentation.html">Expertises</a>
+					<a href="projets.html">Projets</a>
+					<a href="solutions.html">Solutions</a>
+					<a class="bouton compact" href="contact.html">Me contacter</a>
+				</nav>
+			</div>
+		</header>
+		<main id="contenu">
+			<section class="conteneur accueil-introduction">
+				<div class="texte-introduction">
+					<p class="surtitre">Développeur indépendant · Normandie</p>
+					<h1>Des outils pour<br><span>votre entreprise.</span></h1>
+					<p class="introduction">Applications métiers, automatisations et sites web sur mesure.</p>
+					<div class="actions">
+						<a class="bouton" href="contact.html">Me contacter</a>
+						<a class="lien-texte" href="projets.html">Voir mes réalisations</a>
+					</div>
+				</div>
+				<aside class="panneau-introduction" aria-label="Les domaines d’intervention DDD">
+					<div class="panneau-entete">
+						<span>{ D D D }</span>
+						<span>DU BESOIN À L’OUTIL</span>
+					</div>
+					<div class="panneau-titre"> Votre quotidien, <br>
+						<em>en plus simple.</em>
+					</div>
+					<div class="panneau-ligne">
+						<span class="numero">01</span>
+						<div>
+							<strong>Applications métiers</strong>
+							<span>Clients, dossiers, documents</span>
+						</div>
+					</div>
+					<div class="panneau-ligne">
+						<span class="numero">02</span>
+						<div>
+							<strong>Automatisations</strong>
+							<span>Devis, PDF, tâches répétitives</span>
+						</div>
+					</div>
+					<div class="panneau-ligne">
+						<span class="numero">03</span>
+						<div>
+							<strong>Sites web</strong>
+							<span>Vitrines, services, prise de contact</span>
+						</div>
+					</div>
+				</aside>
+			</section>
+			<div class="bandeau-expertises">
+				<div class="conteneur">
+					<span>Applications métiers</span>
+					<span>Google Workspace &amp; Apps Script</span>
+					<span>Automatisation Python</span>
+					<span>Sites web sur mesure</span>
+				</div>
+			</div>
+			<section class="section-projets">
+				<div class="conteneur section">
+					<div class="entete-section">
+						<div>
+							<p class="surtitre">Exemples de ce que je développe</p>
+							<h2>Quelques exemples.</h2>
+						</div>
+						<a class="lien-texte" href="projets.html">Explorer les projets</a>
+					</div>
+					<div class="grille-projets">
+						<article class="projet">
+							<div class="texte-projet">
+								<p class="surtitre">Applications métiers</p>
+								<h3>Vos dossiers, bien organisés.</h3>
+								<p>Devis, pièces à fournir, relances et rendez-vous : des outils adaptés à votre activité.</p>
+								<a class="lien-texte" href="projets.html">Voir les exemples</a>
+							</div>
+						</article>
+						<article class="projet">
+							<div class="texte-projet">
+								<p class="surtitre">Automatisations</p>
+								<h3>Moins de manipulations.</h3>
+								<p>Génération de PDF, rapports et exports pour simplifier les tâches répétitives.</p>
+								<a class="lien-texte" href="projets.html#automatisation">Découvrir les usages</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="conteneur bandeau-contact">
+				<div>
+					<p class="surtitre">Votre projet</p>
+					<h2>Un besoin ?<br>Parlons-en.</h2>
+					
+				</div>
+				<a class="bouton" href="contact.html">Me contacter</a>
+			</section>
+		</main>
+		<footer>
+			<div class="conteneur pied-page">
+				<a class="marque-ddd" href="index.html">{ D D D }</a>
+				<p>Des outils utiles. Un interlocuteur.<br>David Delannoy · Normandie</p>
+				<a href="rgpd.html">Mentions légales &amp; confidentialité</a>
+				<span>© 2026 DDD</span>
+			</div>
+		</footer>
+	</body>
 </html>
