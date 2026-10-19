@@ -1,15 +1,36 @@
-👋 Hello and welcome to my Github page!
-My name is David and I'm learning to become a developer!
+# DDD — Proposition de refonte actualisée
 
-- 🔭 I am currently working on Python and HTML/CSS/Sass/JS projects
-- 🌱 I am currently learning Flask and Grafana.
-- 👯 I'm looking to discuss the profession of developer in general (freelancing, missions, professional tools, terms of quotes and payments, status of a company...)
-- 💬 Ask me about my background if you wish, I will answer you with great pleasure!
-- 📫 How to reach me: well here, or on my website [{ D D D }](https://daviddelannoydeveloppement.github.io/DDD/index.html) or on my [linkedin](https://www.linkedin.com/in/david-delannoy-developpement/) or by email: daviddelannoydeveloppement@gmail.com
+## Découvrir le site
+Ouvrir index.html dans votre navigateur, ou servir le dossier sur un hébergement statique. Aucun serveur applicatif à installer.
 
+## Identité visuelle
+- Logo original conservé.
+- Signature : initiales orange, texte blanc, même taille pour le nom et Développement : Monotype Corsiva, avec Parisienne en police de remplacement et une alternative cursive système.
+- Parisienne est chargée via Google Fonts ; sans connexion, la police système prend le relais.
+- Palette : noir #000000 identique au fond du logo, orange #ff7800 et bleu #11a0ff.
+- Texte courant et titres de contenu conservés en police lisible.
 
+## Organisation
+- index.html : accueil.
+- presentation.html : développement, renfort administratif à distance et approche.
+- projets.html : applications présentées sous des noms génériques, sans identité de client.
+- La gestion commerciale est un exemple parmi les autres sur projets.html.
+- solutions.html, suivi-client.html et flux.html reprennent les projets pour conserver les anciennes adresses.
+- contact.html : email, téléphone et formulaire Google existant chargé à la demande.
+- rgpd.html : informations légales reprises du site d’origine.
+- Les anciennes adresses portfolio, suivi-client.html et flux.html permettent de retrouver le nouveau contenu.
 
+## Maintenance
+Les classes et identifiants personnalisés, variables et fonctions JavaScript sont en français. Les fichiers HTML, CSS/SCSS et JavaScript utilisent des tabulations. Les balises HTML, attributs standard et API natives conservent naturellement leurs noms officiels.
 
-### ⭐ GitHub Stats
+La feuille styles/style.scss utilise une syntaxe compatible CSS. Le fichier style.css est identique. Après une modification, reporter la source dans le CSS ou compiler via Sass :
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=DavidDelannoyDeveloppement&show_icons=true&hide_border=false&title_color=3B1F94f&icon_color=FFE500&bg_color=09131B&text_color=ffffff&border_color=0c1a25)](https://github.com/anuraghazra/github-readme-stats)
+    sass styles/style.scss styles/style.css
+
+## Avant publication
+Cette proposition ne remplace pas le site publié. Les projets sont présentés par exemples généralistes, sans simulation ni noms de clients. Aucun lien de profil Malt n’est inventé.
+
+Les mentions légales, coordonnées et l’hébergement GitHub Pages sont repris du site original : à vérifier avant publication. Les démonstrations HTML (devis, planning, gestion commerciale) seront des supports séparés à créer ; aucun lien fictif n’est affiché. Le renfort administratif est une prestation indépendante, sur un périmètre et des horaires convenus.
+
+## Contrôles
+Syntaxe JavaScript, liens locaux, ancres, anonymisation des références clients et tabulations vérifiés. La vérification visuelle automatisée n’est pas disponible : contrôler le rendu sur ordinateur et mobile avant mise en ligne.
