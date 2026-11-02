@@ -11,7 +11,7 @@
 	--encre:#202428;
 	--largeur:1180px;
 }
-
+ 
 * {
 	box-sizing:border-box;
 }
@@ -1107,7 +1107,7 @@ footer {
 }
 
 .signature>span {
-	font-family: 'Monotype Corsiva', 'Parisienne', 'Segoe Script', cursive;
+	font-family: 'Parisienne', 'Monotype Corsiva', 'Segoe Script', cursive;
 	font-weight: 400;
 	font-size: 1.55rem;
 	line-height: 1.3;
@@ -1139,7 +1139,7 @@ footer {
 }
 
 .marque-ddd {
-	font-family: 'Monotype Corsiva', 'Parisienne', cursive;
+	font-family: 'Parisienne', 'Monotype Corsiva', cursive;
 	font-size: 1.6rem;
 }
 
@@ -1387,3 +1387,23 @@ nav>a[aria-current="page"]:not(.bouton),nav>a:hover {
   color: var(--secondaire);
 }
 
+
+/* Signature avec logo dans le panneau d’accueil. */
+.panneau-entete {
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 14px;
+}
+
+.panneau-entete .signature {
+	flex-shrink: 0;
+}
+
+.panneau-entete .signature>span {
+	font-size: 1.3rem;
+}
+
+.panneau-entete .signature img {
+	width: 42px;
+	height: 42px;
+}

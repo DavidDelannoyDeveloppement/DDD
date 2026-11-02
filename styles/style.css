@@ -876,65 +876,14 @@ footer {
   margin-top: 25px;
 }
 
-
-
 .informations-legales {
   max-width: 850px;
   padding-bottom: 80px;
 }
 
 .informations-legales h2 {
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
-  margin: 0 0 30px;
-  color: var(--texte);
-}
-
-.informations-legales h3 {
-  margin-top: 34px;
-  margin-bottom: 12px;
-  font-size: 1.12rem;
-  color: var(--accent);
-}
-
-.informations-legales p + h3,
-.informations-legales ul + h3 {
-  padding-top: 6px;
-}
-
-.bloc-legal {
-  margin-top: 34px;
-  padding: clamp(26px, 4vw, 42px);
-  border: 1px solid var(--bord);
-  border-radius: 16px;
-  background: var(--surface);
-}
-
-.bloc-legal + .bloc-legal {
-  margin-top: 42px;
-}
-
-.sommaire-legal {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.sommaire-legal a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 42px;
-  padding: 9px 15px;
-  border: 1px solid var(--bord);
-  border-radius: 999px;
-  text-decoration: none;
-  background: var(--surface);
-}
-
-.date-maj {
-  margin: 0 0 12px;
-  font-size: .92rem;
-  color: var(--secondaire);
+  font-size: 1.5rem;
+  margin-block: 35px 20px;
 }
 
 .informations-legales a {
@@ -1152,7 +1101,7 @@ footer {
   }
 }
 .signature > span {
-  font-family: "Monotype Corsiva", "Parisienne", "Segoe Script", cursive;
+  font-family: "Parisienne", "Monotype Corsiva", "Segoe Script", cursive;
   font-weight: 400;
   font-size: 1.55rem;
   line-height: 1.3;
@@ -1184,7 +1133,7 @@ footer {
 }
 
 .marque-ddd {
-  font-family: "Monotype Corsiva", "Parisienne", cursive;
+  font-family: "Parisienne", "Monotype Corsiva", cursive;
   font-size: 1.6rem;
 }
 
@@ -1387,3 +1336,77 @@ nav > a[aria-current=page]:not(.bouton), nav > a:hover {
     gap: 25px;
   }
 }
+/* Mise en forme page Mentions légales & confidentialité - 2026-10-28 */
+.informations-legales h2 {
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  margin: 0 0 30px;
+  color: var(--texte);
+}
+
+.informations-legales h3 {
+  margin-top: 34px;
+  margin-bottom: 12px;
+  font-size: 1.12rem;
+  color: var(--accent);
+}
+
+.informations-legales p + h3,
+.informations-legales ul + h3 {
+  padding-top: 6px;
+}
+
+.bloc-legal {
+  margin-top: 34px;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid var(--bord);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.bloc-legal + .bloc-legal {
+  margin-top: 42px;
+}
+
+.sommaire-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sommaire-legal a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 15px;
+  border: 1px solid var(--bord);
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--surface);
+}
+
+.date-maj {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  color: var(--secondaire);
+}
+
+/* Signature avec logo dans le panneau d’accueil. */
+.panneau-entete {
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.panneau-entete .signature {
+  flex-shrink: 0;
+}
+
+.panneau-entete .signature > span {
+  font-size: 1.3rem;
+}
+
+.panneau-entete .signature img {
+  width: 42px;
+  height: 42px;
+}/*# sourceMappingURL=style.css.map */
