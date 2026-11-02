@@ -1156,6 +1156,13 @@ footer {
 	background: #11a0ff14;
 	border-color: #11a0ff55;
 }
+ 
+
+.panneau-ligne:last-child .numero {
+	color: var(--bleu);
+	background: #11a0ff14;
+	border-color: #11a0ff55;
+}
 
 .grille-services article:nth-child(2) .numero {
 	color: var(--bleu);

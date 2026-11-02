@@ -1151,6 +1151,12 @@ footer {
   border-color: rgba(17, 160, 255, 0.3333333333);
 }
 
+.panneau-ligne:last-child .numero {
+  color: var(--bleu);
+  background: rgba(17, 160, 255, 0.0784313725);
+  border-color: rgba(17, 160, 255, 0.3333333333);
+}
+
 .grille-services article:nth-child(2) .numero {
   color: var(--bleu);
 }
